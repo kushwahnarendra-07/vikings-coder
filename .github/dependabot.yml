@@ -1,0 +1,14 @@
+
+
+version: 2
+updates:
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "pip prod"
+      include: "scope"
+    allow:
+      - dependency-name: "Flask"
+        dependency-type: "direct"
